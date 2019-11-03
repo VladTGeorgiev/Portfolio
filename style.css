@@ -2,8 +2,7 @@ html {
     scroll-behavior: smooth;
     --black: grey;
     --black: #000;
-    --yellow: #FAD649;
-    --light-yellow: #FBE48B;
+    --yellow: #FBD64A;
     --white: #F2F2F2;
     --blue: #1E3045;
     --light-blue: #9BBABA;
@@ -11,20 +10,18 @@ html {
   }
   body {
     margin: 0;
+    padding: 0 5% 0 5%;
     display: grid;
     grid-template-columns: min-content 1fr;
     font-family: system-ui, sans-serif;
     background-color:var(--black);
-    
-    /* this breaks position sticky in Firefox */
-    /* overflow-x: hidden; */
   }
   header {
     grid-column: 1 / 4;
     color: var(--light-blue);
-    padding: 4rem;
+    padding: 5%;
     text-align: center;
-    height: 100vh;;
+    height: 100vh;
   }
 
   aside, nav {
@@ -42,33 +39,21 @@ html {
     }
     nav ul {
       position: sticky;
-      top: 38.5vh;
+      top: 33vh;
     }
   }
-  aside ul li a, nav ul li a {
+  aside ul li a{
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     color: var(--light-blue);
     text-decoration: none;
   }
 
-  nav ul li a:hover {
-    color: var(--light-yellow);
-  }
-  nav ul li a.current {
-    color: var(--yellow); 
-  }
-
-  section {
-    padding: 2rem;
-    margin: 0 0 2rem 0;
-    min-height: 100vh;
-    color: var(--white)
-  }
-  footer {
-    grid-column: 1 / 3;
-    padding: 5rem 1rem;
-    color: var(--white);
+  nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: var(--light-blue);
+    text-decoration: none;
   }
 
   .svg {
@@ -122,13 +107,17 @@ html {
   .first-name {
     -webkit-animation: first-name 2s cubic-bezier(0.215, 0.610, 0.355, 0.600) both;
             animation: first-name 2s cubic-bezier(0.215, 0.610, 0.355, 0.600) both;
-            letter-spacing: 1rem;
+            letter-spacing: 1.3rem;
             font-size: 20rem;
             text-transform: uppercase;
             text-align: left;
             margin: 0;
-            margin-left: 21%;
+            margin-left: 18%;
 
+  }
+
+  .first-name::first-letter {
+    color: var(--yellow);
   }
 
   @-webkit-keyframes first-name {
@@ -166,14 +155,20 @@ html {
 
   .last-name {
     text-transform: uppercase;
-    letter-spacing: 6.5rem;
+    letter-spacing: 6.7rem;
     text-align: left;
-    margin-left: 30%;
-    margin-top: -3rem;
+    margin-left: 27%;
+    margin-top: -2.8%;
   }
 
   #one-liner {
-    margin-top: 15%;
+    margin-top: 8%;
+    font-size: 3rem;
+    letter-spacing: 1rem;
+  }
+    
+  #one-liner span {
+    color: var(--yellow);
   }
 
   .pulsate-fwd {
@@ -203,6 +198,8 @@ html {
     50% {
       -webkit-transform: scale(1.5);
               transform: scale(1.5);
+              transition: color 0.5s ease;
+              color: red;
     }
     100% {
       -webkit-transform: scale(1);
@@ -212,7 +209,7 @@ html {
 
   .aside-ul li:hover{
     -webkit-animation: text-pop-up-top-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: text-pop-up-top-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: text-pop-up-top-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
   @-webkit-keyframes text-pop-up-top-left {
@@ -235,5 +232,93 @@ html {
               transform: translateX(-8px) scale(1.5);
     }
   }
+
+  .nav-ul li:hover{
+    -webkit-animation: text-pop-up-top-rigth 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: text-pop-up-top-rigth 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  @-webkit-keyframes text-pop-up-top-rigth {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(8px) scale(1.3);
+              transform: translateX(8px) scale(1.3);
+    }
+  }
+  @keyframes text-pop-up-top-rigth {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(8px) scale(1.3);
+              transform: translateX(8px) scale(1.3);
+    }
+  }
+
+  .svg-nav {
+    height: 2vh;
+    filter: invert(77%) sepia(5%) saturate(867%) hue-rotate(131deg) brightness(92%) contrast(95%);
+  }
+
+
+  nav ul li a.current{
+    filter: invert(12%) sepia(74%) saturate(6615%) hue-rotate(376deg) brightness(117%) contrast(107%);
+  }
   
+  .tracking-in-contract:hover {
+    -webkit-animation: tracking-in-contract 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: tracking-in-contract 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+
+  @-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+
   
+  section {
+    border: 3px solid red;
+    padding: 5%;
+    height: 100vh;
+    color: var(--light-blue)
+  }
+
+  section h1 {
+    margin-bottom: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--yellow);
+  }
+
+  footer {
+    grid-column: 1 / 3;
+    padding: 5rem 1rem;
+    margin-left: 10%;
+    color: var(--light-blue);
+  }
