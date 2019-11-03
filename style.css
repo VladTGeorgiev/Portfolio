@@ -3,6 +3,7 @@ html {
     --black: grey;
     --black: #000;
     --yellow: #FAD649;
+    --light-yellow: #FBE48B;
     --white: #F2F2F2;
     --blue: #1E3045;
     --light-blue: #9BBABA;
@@ -20,7 +21,7 @@ html {
   }
   header {
     grid-column: 1 / 4;
-    color: var(--white);
+    color: var(--light-blue);
     padding: 4rem;
     text-align: center;
     height: 100vh;;
@@ -50,8 +51,11 @@ html {
     color: var(--light-blue);
     text-decoration: none;
   }
+
+  nav ul li a:hover {
+    color: var(--light-yellow);
+  }
   nav ul li a.current {
-    /* background: var(--blue); */
     color: var(--yellow); 
   }
 
@@ -78,9 +82,158 @@ html {
   }
 
   .header-ul {
-    display: flex;
+    padding: 0;
+    display:inline-block;
+    list-style-type: none;
   }
 
   .header-ul li {
+    float: left;
     padding: 1rem;
+    margin-top: 8vh;
   }
+
+  .header-ul li:hover {
+    -webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  @-webkit-keyframes text-pop-up-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-8px) scale(1.5);
+              transform: translateY(-8px) scale(1.5);
+    }
+  }
+  @keyframes text-pop-up-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-8px) scale(1.5);
+              transform: translateY(-8px) scale(1.5);
+    }
+  }
+
+  .first-name {
+    -webkit-animation: first-name 2s cubic-bezier(0.215, 0.610, 0.355, 0.600) both;
+            animation: first-name 2s cubic-bezier(0.215, 0.610, 0.355, 0.600) both;
+            letter-spacing: 1rem;
+            font-size: 20rem;
+            text-transform: uppercase;
+            text-align: left;
+            margin: 0;
+            margin-left: 21%;
+
+  }
+
+  @-webkit-keyframes first-name {
+    0% {
+      letter-spacing: 7em;
+      -webkit-transform: translateZ(400px);
+              transform: translateZ(400px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes first-name {
+    0% {
+      letter-spacing: 7em;
+      -webkit-transform: translateZ(400px);
+              transform: translateZ(400px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+  .last-name {
+    text-transform: uppercase;
+    letter-spacing: 6.5rem;
+    text-align: left;
+    margin-left: 30%;
+    margin-top: -3rem;
+  }
+
+  #one-liner {
+    margin-top: 15%;
+  }
+
+  .pulsate-fwd {
+    -webkit-animation: pulsate-fwd 2s ease-in-out 2s infinite both;
+            animation: pulsate-fwd 2s ease-in-out 2s infinite both;
+  }
+
+  @-webkit-keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+              transform: scale(1.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+  .aside-ul li:hover{
+    -webkit-animation: text-pop-up-top-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: text-pop-up-top-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  @-webkit-keyframes text-pop-up-top-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-8px) scale(1.5);
+              transform: translateX(-8px) scale(1.5);
+    }
+  }
+  @keyframes text-pop-up-top-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-8px) scale(1.5);
+              transform: translateX(-8px) scale(1.5);
+    }
+  }
+  
+  

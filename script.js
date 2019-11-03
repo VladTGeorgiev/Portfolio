@@ -21,7 +21,5 @@ window.addEventListener("scroll", event => {
   });
 });
 
-const start = document.querySelector("#start")
-start.addEventListener("click", event => document.querySelector("#section-1").scrollIntoView())
 
 
