@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1 class="first-name">|Vlad</h1>
+        <h1 class="first-name"><span>&lt</span>VLAD<span>&gt</span></h1>
         <h2 class="last-name">Georgiev</h2>
         <h4 id="one-liner"><span>{</span>Full stack developer<span>}</span></h4>
         <ul class="header-ul text-pop-up-top">
@@ -19,9 +19,13 @@
             <li><a href='https://github.com/VladTGeorgiev'target="blank"><img class="svg" src="./media/github.svg"/></a></li>
             <li><a href='https://medium.com/@vlad.georgiev'target="blank"><img class="svg" src="./media/medium.svg"/></a></li>
             <img/>
+            <!-- <form action="#section-5">
+                    <button id="hello-btn" type="Submit">Say Hello</button>
+            </form> -->
         </ul>
+        
         <div>
-                <a href='#section-1'><img class="svg pulsate-fwd" src="./media/arrow-down-sign-to-navigate.svg"/></a>
+            <a href='#section-1'><img class="svg-arrow pulsate-fwd" src="./media/arrow-down-sign-to-navigate.svg"/></a>
         </div>
     </header>
 
@@ -38,7 +42,7 @@
     <main>
         <section id="section-1">
             <h1>Hi, I'm Vlad. Nice to meet you.</h1>
-            <p>I'm a Full-stack software developer with a passion for designing beautiful and functional applications. With experience in React.js, Node.js, and Ruby on Rails and a background in the Hospitality and FMCG industries, I discovered web development through my lifelong interest in the tech world. I bring strong skills in team-building and project management that help tech teams deliver outstanding results.</p>
+            <p>I'm a Full-stack software developer with a passion for designing beautiful and functional applications. With experience in React, Node.js, and Ruby on Rails and a background in the Hospitality and FMCG industries, I discovered web development through my lifelong interest in the tech world. I bring strong skills in team-building and project management that help tech teams deliver outstanding results.</p>
 
         </section>
         <section id="section-2">
@@ -59,11 +63,11 @@
         <section id="section-5">
             <h1>Say Hello</h1>
             <p>Thank you for taking the time to get in touch. How can I help you?</p>
-            <form>
-                <input>
-                <input>
-                <input>
-                <input type="submit">
+            <form action="#section-5">
+                <input class="input-name">
+                <input class="input-e-mail">
+                <input class="input-text">
+                <button class="hello-btn" type="Submit">Send</button>
             </form>
         </section>
     </main>
